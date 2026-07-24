@@ -1,0 +1,168 @@
+export const categories = [
+  { name: 'Briefs', label: 'Бриф', note: 'Сонгодог тав тух', tone: '#f1b8bd' },
+  { name: 'Hipsters', label: 'Хипстер', note: 'Намхан, эвтэйхэн', tone: '#cfc0e8' },
+  { name: 'High-Waist', label: 'Өндөр суудалтай', note: 'Зөөлөн дэмжлэг', tone: '#efc2a9' },
+  { name: 'Boyshorts', label: 'Бойшорт', note: 'Бүрэн бүрхэлт', tone: '#b9d6ce' },
+  { name: 'Thongs', label: 'Тонг', note: 'Хөнгөн мэдрэмж', tone: '#e7b8d4' },
+  { name: 'Multipacks', label: 'Олон хосын багц', note: 'Хамтдаа илүү', tone: '#e2c8a3' },
+]
+
+export const getCategoryLabel = (name) => categories.find((category) => category.name === name)?.label || name
+
+const shared = {
+  sizes: ['XS', 'S', 'M', 'L', 'XL', '2X', '3X'],
+  composition: '95% GOTS гэрчилгээтэй хөвөн, 5% эластан; доторлогоо нь 100% хөвөн.',
+  care: 'Ижил өнгийн хувцастай хүйтэн усаар угаана. Бага хэмд хатаана. Цайруулагч болон даавуу зөөлрүүлэгч хэрэглэхгүй.',
+}
+
+export const products = [
+  {
+    ...shared,
+    id: 'cloud-soft-brief',
+    name: 'Үүлэн зөөлөн бриф',
+    category: 'Briefs',
+    price: 18,
+    rating: 4.9,
+    reviewCount: 248,
+    badge: 'Bestseller',
+    badgeLabel: 'Шилдэг борлуулалт',
+    colors: [
+      { name: 'Дэлбээ ягаан', hex: '#df8f9d' },
+      { name: 'Дулаан крем', hex: '#e9dac6' },
+      { name: 'Какао', hex: '#8c6658' },
+    ],
+    description: 'Үүлэн мэт зөөлөн даавуу, арьсанд шигдэхгүй бүсэлхийтэй өдөр бүрийн найдвартай бриф.',
+  },
+  {
+    ...shared,
+    id: 'meadow-hipster',
+    name: 'Нугын хипстер',
+    category: 'Hipsters',
+    price: 20,
+    rating: 4.8,
+    reviewCount: 186,
+    badge: 'New',
+    badgeLabel: 'Шинэ',
+    colors: [
+      { name: 'Зөөлөн лаванда', hex: '#b9a5d5' },
+      { name: 'Тоорын сорбет', hex: '#e7a37e' },
+      { name: 'Шөнийн чавга', hex: '#5d465f' },
+    ],
+    description: 'Намхан суудалтай, хөлний ирмэг нь зөөлөн, ар талын бүрхэлт нь яг таарсан хипстер.',
+  },
+  {
+    ...shared,
+    id: 'everyday-high-rise',
+    name: 'Өдөр тутмын өндөр суудалтай',
+    category: 'High-Waist',
+    price: 22,
+    rating: 4.9,
+    reviewCount: 312,
+    badge: 'Bestseller',
+    badgeLabel: 'Шилдэг борлуулалт',
+    colors: [
+      { name: 'Тоорын цэцэг', hex: '#e9a187' },
+      { name: 'Дулаан крем', hex: '#e9dac6' },
+      { name: 'Гүн сарнай', hex: '#9f5365' },
+    ],
+    description: 'Хэвлий шахахгүй, хумигдахгүйгээр бэлхүүсний жам ёсны шугам дээр зөөлөн тогтох өндөр суудалтай загвар.',
+  },
+  {
+    ...shared,
+    id: 'weekend-boyshort',
+    name: 'Амралтын бойшорт',
+    category: 'Boyshorts',
+    price: 24,
+    rating: 4.7,
+    reviewCount: 142,
+    colors: [
+      { name: 'Сэйж манан', hex: '#a9c7bd' },
+      { name: 'Дэлбээ ягаан', hex: '#df8f9d' },
+      { name: 'Бэхэн хар', hex: '#43434f' },
+    ],
+    description: 'Бүрэн бүрхэлт, уян хөлний эсгүүр, толигор хэлбэр нь тайван өглөө ч, завгүй өдөр ч эвтэйхэн.',
+  },
+  {
+    ...shared,
+    id: 'barely-there-thong',
+    name: 'Мэдэгдэхгүй тонг',
+    category: 'Thongs',
+    price: 17,
+    rating: 4.7,
+    reviewCount: 118,
+    colors: [
+      { name: 'Жимсгэнэ ягаан', hex: '#c67691' },
+      { name: 'Зөөлөн лаванда', hex: '#b9a5d5' },
+      { name: 'Какао', hex: '#8c6658' },
+    ],
+    description: 'Өд мэт хөнгөн суналттай хөвөн, зөөлөн бүсэлхий, үл мэдэгдэх арын эсгүүртэй.',
+  },
+  {
+    ...shared,
+    id: 'three-day-trio',
+    name: 'Гурван өдрийн багц',
+    category: 'Multipacks',
+    price: 48,
+    compareAt: 54,
+    rating: 4.9,
+    reviewCount: 205,
+    badge: 'Save 12%',
+    badgeLabel: '12% хэмнэнэ',
+    colors: [
+      { name: 'Ягаан хослол', hex: '#dda0aa' },
+      { name: 'Натурал хослол', hex: '#bca997' },
+      { name: 'Цэцэрлэгийн хослол', hex: '#aebfac' },
+    ],
+    description: 'Сонгосон өнгийн гурван үүлэн зөөлөн бриф—өдөр тутмын дуртай зүйл олон байх тусмаа сайн.',
+  },
+  {
+    ...shared,
+    id: 'ribbed-dream-brief',
+    name: 'Хээтэй мөрөөдлийн бриф',
+    category: 'Briefs',
+    price: 21,
+    rating: 4.8,
+    reviewCount: 97,
+    badge: 'Limited',
+    badgeLabel: 'Хязгаартай',
+    colors: [
+      { name: 'Голт бор манан', hex: '#c4b3d5' },
+      { name: 'Цөцгийн крем', hex: '#e8d7aa' },
+      { name: 'Сарнайн мод', hex: '#a66d72' },
+    ],
+    description: 'Нарийн судалтай хөвөн нь сонгодог брифийг илүү тухтай атлаа хөнгөн, амьсгалдаг хэвээр байлгана.',
+  },
+  {
+    ...shared,
+    id: 'soft-stretch-hipster',
+    name: 'Зөөлөн суналттай хипстер',
+    category: 'Hipsters',
+    price: 19,
+    rating: 4.6,
+    reviewCount: 84,
+    colors: [
+      { name: 'Чангаанз', hex: '#e6aa87' },
+      { name: 'Нил ягаан', hex: '#b0839b' },
+      { name: 'Дулаан крем', hex: '#e9dac6' },
+    ],
+    description: 'Дөрвөн чиглэлд эвтэйхэн сунадаг, урд бүсэлхий нь толигор орчин үеийн хипстер.',
+  },
+]
+
+export const testimonials = [
+  {
+    quote: 'Өмссөнөө бүр мартчихсан—яг л миний хүссэн мэдрэмж. Бүсэлхий нь үнэхээр зөөлөн.',
+    name: 'Maya R.',
+    detail: 'Баталгаажсан худалдан авагч · 2X хэмжээ',
+  },
+  {
+    quote: 'Хөвөн нь биетэй хэр нь сайхан амьсгалдаг. Долоо хоногийн дотор гурван хосын багцаа авсан.',
+    name: 'Elena K.',
+    detail: 'Баталгаажсан худалдан авагч · M хэмжээ',
+  },
+  {
+    quote: 'Эцэст нь шахахгүй мөртлөө байрандаа тогтдог өндөр суудалтай загвар оллоо. Өнгө нь бодитоороо бүр гоё.',
+    name: 'Jules A.',
+    detail: 'Баталгаажсан худалдан авагч · XL хэмжээ',
+  },
+]

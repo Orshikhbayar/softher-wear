@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.wrangler/
+.dev.vars*
+.DS_Store
+output/
+outputs/
+work/
+.playwright-cli/
+playwright-cli.json
