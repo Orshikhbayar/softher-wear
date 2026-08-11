@@ -44,7 +44,8 @@ function drawCover(canvas, image) {
 
   if (imageRatio > canvasRatio) {
     sourceWidth = image.naturalHeight * canvasRatio
-    const focusX = clamp(Number(canvas.dataset.focusX ?? 0.5))
+    const responsiveFocus = bounds.width <= 700 ? canvas.dataset.mobileFocusX : undefined
+    const focusX = clamp(Number(responsiveFocus ?? canvas.dataset.focusX ?? 0.5))
     sourceX = (image.naturalWidth - sourceWidth) * focusX
   } else {
     sourceHeight = image.naturalWidth / canvasRatio
@@ -335,6 +336,7 @@ export function HeroCinematic({ onShop, onFit }) {
           ref={canvasRef}
           className="cinematic-canvas"
           data-focus-x="0"
+          data-mobile-focus-x="0.5"
           role="img"
           aria-label="Хөвөнгийн цэцэг дэлгэрч, ширхэгүүд нь утас болон даавуу болж, дэлбээ ягаан Үүлэн зөөлөн бриф болон бүрэлдэх кино дараалал"
         >
@@ -403,6 +405,7 @@ export function MaterialCinematic() {
           ref={canvasRef}
           className="cinematic-canvas"
           data-focus-x="0"
+          data-mobile-focus-x="0.5"
           role="img"
           aria-label="Дэлбээ ягаан брифийн хөвөн нэхээс, зөөлөн бүсэлхий, оёдол, шошгогүй дотор талыг ойроос харуулах кино дараалал"
         >

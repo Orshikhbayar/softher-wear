@@ -546,7 +546,15 @@ h3 { line-height: 1.2; }
   .icon-button { width: 42px; height: 42px; }
   .cinematic-section { height: 175svh; }
   .cinematic-material { height: 150svh; }
-  .cinematic-sticky { min-height: 610px; }
+  .cinematic-sticky { height: calc(100svh - 67px); min-height: 540px; top: 67px; }
+  .cinematic-poster, .cinematic-canvas {
+    height: clamp(280px, 46svh, 410px);
+    bottom: auto;
+  }
+  .cinematic-hero .cinematic-poster, .cinematic-material .cinematic-poster { object-position: center; }
+  .cinematic-vignette, .cinematic-material .cinematic-vignette { background:
+    linear-gradient(180deg, rgba(251,247,242,.28) 0%, transparent 22%, transparent 34%, rgba(251,247,242,.3) 45%, rgba(251,247,242,.92) 61%, var(--cream) 74%);
+  }
   .cinematic-callout-layer, .material-callouts { top: 104px; left: 12px; right: 12px; gap: 5px; }
   .cinematic-callout-layer .cinematic-callout, .material-callouts .cinematic-callout { min-height: 27px; padding: 5px 7px; font-size: .54rem; letter-spacing: .075em; }
   .cinematic-hero-copy, .material-cinematic-copy { left: 12px; right: 12px; bottom: 62px; }
