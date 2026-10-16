@@ -8,3 +8,15 @@ outputs/
 work/
 .playwright-cli/
 playwright-cli.json
+
+# --- repo hygiene (shixo sync) ---
+.env*
+!.env*.example
+.venv/
+venv/
+node_modules/
+.next/
+dist/
+__pycache__/
+.DS_Store
+.claude/
